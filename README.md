@@ -4,7 +4,7 @@ A simple site where a user can choose a color and then draw rectangles on a canv
 
 ## How to use?
 
-To use in its current state, visit [Etch-A-Sketch](lorien-davis.github.io/etch-a-sketch).
+To use in its current state, visit [Etch-A-Sketch](https://lorien-davis.github.io/etch-a-sketch).
 
 ## Credits
 
