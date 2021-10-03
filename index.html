@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etch-A-Sketch</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="tools-bar">
+        <div id="color-tool">
+          <h3 class="tool-name">Color</h3>
+          <div class="tool-container">
+            <input id="color-wheel" type="color" />
+            <p id="color-wheel-desc" class="tool-desc">#000000</p>
+          </div>
+        </div>
+      </div>
+      <div id="grid-container"></div>
+    </div>
+  </body>
+</html>
