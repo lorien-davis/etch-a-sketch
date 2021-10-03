@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+#container {
+  margin: auto;
+  width: 100vw;
+  height: 100vh;
+
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+#tools-bar {
+  padding: 100px 50px;
+  flex: 0.25;
+  background-color: hsla(0, 0%, 100%, 1);
+}
+
+#grid-container {
+  flex: 1;
+  background-color: hsla(0, 0%, 91%, 1);
+
+  display: grid;
+}
+
+#color-wheel {
+  margin-right: 10px;
+  width: 30px;
+  height: 35px;
+
+  border: none;
+  background: none;
+}
+
+.tool-name {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.tool-desc {
+  font-weight: 300;
+}
+
+.tool-container {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+}
