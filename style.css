@@ -1,56 +1,148 @@
-* {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
-}
-
-#container {
-  margin: auto;
-  width: 100vw;
   height: 100vh;
 
-  box-sizing: border-box;
-
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.05em;
+
+  background-color: hsla(0, 0%, 90%, 1);
 }
 
-#tools-bar {
-  padding: 100px 50px;
-  flex: 0.25;
+input,
+button {
+  font-family: inherit;
+  letter-spacing: inherit;
+}
+
+input[type="color"],
+input[type="color"]::-webkit-color-swatch,
+input[type="color"]::-webkit-color-swatch-wrapper {
+  -webkit-appearance: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  box-shadow: 0.05em 0.05em 0.2em 0.2em rgba(102, 74, 74, 0.01);
+}
+
+.modal {
+  height: 40em;
+  width: 60em;
+
+  display: flex;
+
+  box-shadow: 5px 10px 15px 5px rgba(0, 0, 0, 0.05);
+  border-radius: 1em;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 20em;
+
   background-color: hsla(0, 0%, 100%, 1);
 }
 
-#grid-container {
-  flex: 1;
-  background-color: hsla(0, 0%, 91%, 1);
+.grid-canvas {
+  width: 40em;
 
   display: grid;
-}
-
-#color-wheel {
-  margin-right: 10px;
-  width: 30px;
-  height: 35px;
-
-  border: none;
-  background: none;
-}
-
-.tool-name {
-  font-size: 24px;
-  font-weight: 400;
-}
-
-.tool-desc {
-  font-weight: 300;
+  background-color: hsla(0, 0%, 97%, 1);
+  cursor: pointer;
 }
 
 .tool-container {
-  margin-top: 30px;
+  margin: 2em;
+
   display: flex;
+  flex-direction: column;
+}
+
+.tool-name {
+  margin-bottom: 0.5em;
+
+  font-weight: 400;
+  font-size: 1.25em;
+}
+
+.tool-selector {
+  height: 3em;
+  width: 15em;
+
+  border: 0.1em solid hsla(0, 0%, 73%, 1);
+  border-radius: 0.5em;
+  color: hsla(0, 0%, 73%, 1);
+  background: none;
+  font-weight: 300;
+  font-size: 1em;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: start;
   align-items: center;
+}
+
+.tool-option {
+  margin-top: 1.5em;
+}
+
+.tool-container {
+  margin-bottom: 3em;
+}
+
+.tool-input {
+  width: 1em;
+  height: 1em;
+  margin: 0 1em;
+
+  background: hsla(0, 0%, 83%, 1);
+  border-radius: 50%;
+}
+
+.btn-warning {
+  color: hsla(360, 72%, 61%, 1);
+  border-color: hsla(360, 72%, 61%, 1);
+}
+
+.btn-warning .tool-icon {
+  background: none;
+  filter: invert(70%) sepia(62%) saturate(4000%) hue-rotate(329deg)
+    brightness(92%) contrast(92%);
+}
+
+.btn-active {
+  background-color: hsla(0, 0%, 0%, 1);
+  color: hsla(0, 0%, 100%, 1);
+  font-weight: 400;
+}
+
+.btn-active .tool-input {
+  box-sizing: border-box;
+  background: hsla(0, 0%, 0%, 1);
+  border: 0.2em solid hsla(0, 0%, 100%, 1);
+}
+
+.btn-borderless {
+  border: none;
+  color: hsla(0, 0%, 0%, 1);
+}
+
+@media only screen and (max-width: 960px) {
+  body {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  body {
+    font-size: 8px;
+  }
 }
