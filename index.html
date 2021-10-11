@@ -4,28 +4,70 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Etch-A-Sketch</title>
+    <title>Profile Creator</title>
     <link rel="stylesheet" href="./style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap"
       rel="stylesheet"
     />
     <script src="./script.js" defer></script>
   </head>
   <body>
-    <div id="container">
-      <div id="tools-bar">
-        <div id="color-tool">
-          <h3 class="tool-name">Color</h3>
-          <div class="tool-container">
-            <input id="color-wheel" type="color" />
-            <p id="color-wheel-desc" class="tool-desc">#000000</p>
+    <div id="profile-editor" class="modal">
+      <div id="toolbar" class="sidebar">
+        <div class="tool-container">
+          <h2 class="tool-name">Color</h2>
+          <div class="tool-options-container">
+            <div class="tool-option">
+              <label for="tool-color" class="tool-selector btn-borderless">
+                <input id="tool-color" class="tool-input" type="color" />
+                <p id="tool-color-text" class="tool-text">000000</p>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="tool-container">
+          <h2 class="tool-name">Mode</h2>
+          <div class="tool-options-container">
+            <div class="tool-option">
+              <button data-mode="draw" class="tool-selector btn-active">
+                <div class="tool-input"></div>
+                Draw
+              </button>
+            </div>
+            <div class="tool-option">
+              <button data-mode="erase" class="tool-selector">
+                <div class="tool-input"></div>
+                Erase
+              </button>
+            </div>
+            <div class="tool-option">
+              <button data-mode="rainbow" class="tool-selector">
+                <div class="tool-input"></div>
+                Rainbow
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="tool-container">
+          <h2 class="tool-name">Reset</h2>
+          <div class="tool-options-container">
+            <div class="tool-option">
+              <button id="tool-reset" class="tool-selector btn-warning">
+                <img
+                  class="tool-input tool-icon"
+                  src="./img/reset.svg"
+                  alt="reset-button-icon"
+                />
+                Reset drawing
+              </button>
+            </div>
           </div>
         </div>
       </div>
-      <div id="grid-container"></div>
+      <div id="canvas" class="grid-canvas"></div>
     </div>
   </body>
 </html>
